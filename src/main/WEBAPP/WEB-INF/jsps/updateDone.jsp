@@ -8,10 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>update Done</title>
 </head>
 <body>
-Product Delete successfully By id  <br>
+Product Saved successfully By id  <br>
 <a href="home">Back to home</a>
 <a href="showProd">View All Products</a>
 </body>

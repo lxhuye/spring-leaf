@@ -17,12 +17,12 @@
 <a href="home">back to home page</a> <br>
 <a href="showProd">show all products</a> <br>
 
-<form action="saveUpdateProd" method="get">
-    Product Id:<input type="text" placeholder="${setproduct.id}" readonly="true" name="id"> <br>
-    Product Image: <input type="text" placeholder="${setproduct.image}" name="image"> <br>
-    Product Name: <input type="text" placeholder="${setproduct.name}"  name="name"> <br>
-    Product description: <input type="text" placeholder="${setproduct.description}"  name="description">  <br>
-    Product Price: <input type="text" placeholder="${setproduct.price}"  name="price">  <br>
+<form action="saveUpdateProd" method="post">
+    Product Id:<input type="text" value="${setproduct.id}" readonly="true" name="id"> <br>
+    Product Image: <input type="text" value="${setproduct.image}" name="image"> <br>
+    Product Name: <input type="text" value="${setproduct.name}"  name="name"> <br>
+    Product description: <input type="text" value="${setproduct.description}"  name="description">  <br>
+    Product Price: <input type="text" value="${setproduct.price}"  name="price">  <br>
     <input type="submit">
 </form>
 </body>

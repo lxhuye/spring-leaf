@@ -16,7 +16,7 @@
 <a href="home">back to home page</a> <br>
 <a href="showProd">show all products</a> <br>
 
-<form action="saveProd" method="get">
+<form action="saveProd" method="post">
     Product Image: <input type="text" name="image"> <br>
     Product Name: <input type="text" name="name"> <br>
     Product description: <input type="text" name="description">  <br>

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -28,7 +29,7 @@ public class productController {
         return "createProduct";
     }
 
-    @RequestMapping("/saveProd")
+    @RequestMapping(value = "/saveProd", method = RequestMethod.POST)
     public String saveProduct(@ModelAttribute("product") Product product, ModelMap modelMap){
         Product product1 = service.saveProduct(product);
         String msg = "Product saved with id " + product1.getId();
@@ -50,18 +51,18 @@ public class productController {
         return "deleteDone";
     }
 
-    @RequestMapping("/updateProd")
+    @RequestMapping(value = "/updateProd")
     public String updateProduct(@RequestParam("id") int id,ModelMap modelMap){
         Product product = service.getProductById(id);
         modelMap.addAttribute("setproduct",product);
         return "update";
     }
 
-//    @RequestMapping("/saveUpdateProd")
-//    public String saveUpdateProduct(@ModelAttribute("product") Product product){
-//
-//
-//    }
+    @RequestMapping(value = "/saveUpdateProd", method = RequestMethod.POST)
+    public String saveUpdateProduct(@ModelAttribute("product") Product product){
+        service.saveProduct(product);
+        return "updateDone";
+    }
 
     @RequestMapping("/searchProd")
     public String searchProduct(@RequestParam("productName") String name, ModelMap modelMap){
